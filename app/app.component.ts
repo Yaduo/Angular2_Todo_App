@@ -5,6 +5,7 @@ import {TodoService} from './todo.service' ;
   selector: 'my-app',
   template: `<h1>My First Angular App</h1>
             <div><todo-input></todo-input></div>
+            <div><todo-list></todo-list></div>
             `,
   providers: [TodoService]
 })
