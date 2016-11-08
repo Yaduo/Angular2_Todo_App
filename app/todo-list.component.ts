@@ -8,8 +8,8 @@ import {SearchPipe} from "./search.pipe";
     template: `
                 <div>
                     <ul>
-                        <li *ngFor="let todo of todoService.todos | search">
-                            <todo-item-render [todo]=todo></todo-item-render>
+                        <li *ngFor="let todo of todoService.todos | started">
+                            <todo-item-render [todo]=todo (toggle)=todoService.toggleTodo($event) ></todo-item-render>
                         </li>
                     </ul>
                 </div> 
