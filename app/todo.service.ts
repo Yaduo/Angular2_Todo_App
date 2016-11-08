@@ -9,4 +9,8 @@ export class TodoService {
         new TodoModel("run"),
         new TodoModel("look")
     ];
+
+    addTodo(todo: TodoModel) {
+        this.todos = [...this.todos, todo];
+    }
 }

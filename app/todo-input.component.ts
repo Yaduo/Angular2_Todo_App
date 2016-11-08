@@ -21,7 +21,8 @@ export class TodoInput {
     onClick() {
         let deepCopy = new TodoModel("");
         Object.assign(deepCopy, this.todoModel);
-        this.todoService.todos.push(deepCopy);
+        //this.todoService.todos.push(deepCopy);
+        this.todoService.addTodo(deepCopy);
     }
 
 
