@@ -5,8 +5,8 @@ import { TodoModel } from './todo.model';
     name: "started"
 })
 export class StartedPipe {
-    transform(value) {
-        return value.filter((i:TodoModel) => i.Status=="started")
+    transform(value, status) {
+        return value.filter((i:TodoModel) => i.Status==status);
     }
 
 }
