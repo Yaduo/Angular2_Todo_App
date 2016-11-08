@@ -6,7 +6,13 @@ import { TodoModel } from './todo.model'
     selector: 'todo-list',
     template: `
                 <div>
-                    <ul><li *ngFor="let todo of todoService.todos">{{todo.Title}}</li></ul>
+                    <ul>
+                        <li *ngFor="let todo of todoService.todos">
+                            <span [hidden]="todo.Status=='completed'">{{todo.Title}}</span>
+                            <span [contentEditable]="todo.Status=='completed'">{{todo.Title}}</span>
+                            <button (click)="todo.toggle()">toggle</button>
+                        </li>
+                    </ul>
                 </div> 
             `
 })

@@ -8,4 +8,8 @@ export class TodoModel {
         this.Title = title;
         this.Status = "started"
     }
+
+    toggle() {
+        this.Status = this.Status=="started" ? "completed" : "started";
+    }
 }
